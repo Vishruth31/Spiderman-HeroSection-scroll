@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#ad8884",
+              "on-tertiary-fixed-variant": "#334576",
+              "primary-fixed-dim": "#ffb4ac",
+              "secondary-container": "#00d2fd",
+              "outline-variant": "#5d3f3c",
+              "on-secondary-fixed-variant": "#004e5f",
+              "surface": "#131314",
+              "error": "#ffb4ab",
+              "surface-dim": "#131314",
+              "inverse-primary": "#c00016",
+              "tertiary": "#b4c5fe",
+              "on-tertiary-fixed": "#021848",
+              "on-surface": "#e5e2e3",
+              "on-error-container": "#ffdad6",
+              "on-secondary-container": "#005669",
+              "background": "#131314",
+              "error-container": "#93000a",
+              "on-primary-container": "#ffffff",
+              "on-secondary": "#003642",
+              "secondary-fixed-dim": "#3cd7ff",
+              "on-primary": "#690007",
+              "surface-tint": "#ffb4ac",
+              "inverse-surface": "#e5e2e3",
+              "primary": "#ffb4ac",
+              "surface-container": "#201f20",
+              "secondary": "#a2e7ff",
+              "primary-fixed": "#ffdad6",
+              "inverse-on-surface": "#313031",
+              "tertiary-container": "#6475a9",
+              "surface-variant": "#353436",
+              "on-surface-variant": "#e7bdb8",
+              "on-primary-fixed-variant": "#93000e",
+              "primary-container": "#e62429",
+              "tertiary-fixed-dim": "#b4c5fe",
+              "surface-container-high": "#2a2a2b",
+              "surface-container-low": "#1c1b1c",
+              "surface-container-lowest": "#0e0e0f",
+              "on-primary-fixed": "#410003",
+              "on-tertiary": "#1c2e5e",
+              "on-secondary-fixed": "#001f27",
+              "on-background": "#e5e2e3",
+              "surface-bright": "#3a393a",
+              "surface-container-highest": "#353436",
+              "secondary-fixed": "#b4ebff",
+              "on-tertiary-container": "#ffffff",
+              "on-error": "#690005",
+              "tertiary-fixed": "#dbe1ff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(28, 27, 28, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .text-glow-red:hover {
+        text-shadow: 0 0 15px rgba(230, 36, 41, 0.6);
+      }
+      .text-glow-blue:hover {
+        text-shadow: 0 0 15px rgba(0, 210, 253, 0.6);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131314]/60 backdrop-blur-xl border-b border-white/5 shadow-[0_24px_48px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
+<!-- Brand Logo -->
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#ffb4ac] dark:text-[#e62429]" data-icon="hub">hub</span>
+<span class="text-2xl font-bold tracking-tighter text-[#e62429] dark:text-[#ffb4ac] font-headline uppercase">Spidey</span>
+</div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline tracking-tighter uppercase text-[0.875rem] transition-all duration-300 cubic-bezier(0.4,0,0.2,1) hover:text-[#00d2fd] hover:bg-white/5 px-3 py-2 rounded-sm text-[#ffb4ac] border-b-2 border-[#e62429]" href="#">Different Spider-Mans</a>
+<a class="font-headline tracking-tighter uppercase text-[0.875rem] transition-all duration-300 cubic-bezier(0.4,0,0.2,1) hover:text-[#00d2fd] hover:bg-white/5 px-3 py-2 rounded-sm text-[#e5e2e3]/70" href="#">Different Verse</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-sm font-headline tracking-tighter uppercase text-[0.875rem] transition-all duration-300 active:scale-95 hover:bg-[#ffb4ac] hover:text-[#690007]">
+                    Select Your Spider-Man
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
+<img alt="Cinematic Multiverse" class="w-full h-full object-cover" data-alt="Cinematic wide shot of a futuristic neon-lit city at night with vibrant red and blue electrical distortions and overlapping multiverse portal effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhIbicBiAMsidjVbkYDbU5gOsIhDh2AuVmnRKeBHHY9rimi1MkhoGcbiQt1BmOQyuPIAVlsnQPmZnXZn-rPQoDvk45C41a_0mNrCRx3UnovQ6scwJX3bvqDmmkZSfoK4qipTH8k-dQdjshBvEVM98xqS7MygVdnbWGZTcc0Qk_vOtvG53ioplOd5a8cJmLNpzTZm5Loc4-e2Yks5LjSOGtMt_DiqM_NrvsyDgcvyUPY9LtjtrN8FFPYK7BpADeDgu6VYON_jq3I8E"/>
+</div>
+<div class="relative z-20 max-w-[1440px] mx-auto px-8 md:px-24 w-full">
+<div class="max-w-2xl space-y-6">
+<span class="font-label tracking-[0.2em] text-secondary uppercase bg-surface-container-highest px-3 py-1 rounded-sm">Multiverse Nexus</span>
+<h1 class="font-headline text-[4rem] md:text-[6rem] leading-none font-bold tracking-tighter uppercase">
+                    Beyond <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-container">The Web</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant/80 max-w-lg">
+                    Witness the convergence of realities. Explore the definitive archive of Spider-Variants across Earth-616, Earth-1610, and beyond. Every thread, every choice, one destiny.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-sm font-headline font-bold tracking-tighter uppercase transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(230,36,41,0.3)]">
+                        Enter The Verse
+                    </button>
+<button class="border border-outline-variant/30 text-on-surface px-8 py-4 rounded-sm font-headline font-bold tracking-tighter uppercase backdrop-blur-md transition-all duration-300 hover:bg-surface-bright">
+                        View Archives
+                    </button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 opacity-50">
+<span class="text-[0.6rem] font-label tracking-[0.4em] uppercase">Scroll</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary-container to-transparent"></div>
+</div>
+</section>
+<!-- Featured Spider-Variants (Bento Grid) -->
+<section class="bg-surface py-24 px-8 md:px-24">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<h2 class="font-headline text-4xl font-bold tracking-tighter uppercase mb-2">Spider-Variants</h2>
+<p class="text-on-surface-variant font-body">Categorized by dimensional frequency and origin story.</p>
+</div>
+<div class="flex gap-4">
+<button class="p-2 border border-outline-variant/20 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-2 border border-outline-variant/20 rounded-full hover:bg-surface-container-high transition-colors text-secondary-container">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- Main Featured Card -->
+<div class="md:col-span-7 relative group overflow-hidden rounded-lg bg-surface-container-low border border-white/5">
+<img alt="Spider-Man Noir" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" data-alt="Dramatic high-contrast close-up of a Spider-Man suit detail with glowing red lines against a dark moody city background with heavy rain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7hGjjg_qxKJoVapybU0hb98PiJQuFsIsmHe0H6NM7OeyOVvJ3VI1zgBfCDnk--XMyyN4eUDeZQIcM3f1CBSdqkvlf6tVtPxN8vLdoDednoLuZtEbi-T2YF3nPUMCdcooU_PoEswm0S--nxo8e4oH8IXcuMVYxTTb3jAcslutWUulHBcdX3l-r4SFYoVkXsMgKAfwjt-d6BRoHLrI_1bR_7RRTpIbQTgrgAMjFyzJHM06aeXpvbToZ1VE2ejby4JylBWoq-3EqUnc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent p-10 flex flex-col justify-end">
+<span class="font-label text-primary-container mb-2 tracking-widest">EARTH-90214</span>
+<h3 class="font-headline text-3xl font-bold uppercase mb-4">Spider-Man Noir</h3>
+<p class="text-on-surface-variant max-w-sm line-clamp-2">A gritty, hard-boiled detective variant from the 1930s Great Depression era.</p>
+</div>
+</div>
+<!-- Secondary Cards Column -->
+<div class="md:col-span-5 grid grid-rows-2 gap-6">
+<div class="relative group overflow-hidden rounded-lg bg-surface-container-low border border-white/5">
+<img alt="Spider-Gwen" class="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110" data-alt="Modern neon aesthetic portrait of a hero in a white and pink suit with stylized urban graffiti and electric blue highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg6PpDD2_Fzj2AQDJlJ6B890vvQ9LRUh3QQlWXB0D85aOkQDy_tPjfq0Ptq64Z5ow-k3jm5T4WIc5YpnpQYgxvOUorFegZRK1VY_-P19JwHmfl7SbmFLI5t2CdTjxCC-tnOwI5nWYoxnp7acPMVSejplSLK7OPfKSqr_DrInAUvAnjtFXTjcSchy8zwta7Id27DnU2lbuFlM5ZSyj7wbv-Fh24KdveCJkHRWnUqrktA5iF0YlgJtaNeDzrkS6cFm6Ul41S6B8daMA"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-background/80 to-transparent">
+<span class="font-label text-secondary-container mb-2 tracking-widest text-[0.7rem]">EARTH-65</span>
+<h3 class="font-headline text-xl font-bold uppercase">Spider-Gwen</h3>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-lg bg-surface-container-low border border-white/5">
+<img alt="Spider-Man 2099" class="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110" data-alt="Cyberpunk futuristic city silhouette at sunset with deep red and orange sky and advanced digital interface elements overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAoC8ThnoQGiP3lrfbMSo5M9Gtb8OI1Lt_Cc-09AA23v25NABM87X6wW_6VV-uYm1tUAZH7v-9yK_KB7Pgegy7FGstqVqEcQUVcOvpZm2AFKy3dQT5KoS4MdzN01RjmCLL-wZaRIrY_TPyKd65uBO57iLOS_45BoD1ip5ZSwMlYEpdxk5gRsf9d3SELkyyEs8wkVY9tKktDFopgOOIioplxYy5IOV36bjaaFBeFrm4cEzHUKUWGMCM4VD1SLz3rsXCyaC3WZbddkM"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-background/80 to-transparent">
+<span class="font-label text-primary mb-2 tracking-widest text-[0.7rem]">EARTH-928</span>
+<h3 class="font-headline text-xl font-bold uppercase">Spider-Man 2099</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Ticker -->
+<section class="bg-surface-container-lowest border-y border-white/5 py-12">
+<div class="max-w-[1440px] mx-auto px-8 flex flex-wrap justify-between gap-12">
+<div class="flex flex-col">
+<span class="text-primary-container font-headline text-4xl font-bold tracking-tighter">900+</span>
+<span class="font-label text-on-surface-variant tracking-widest text-[0.7rem]">VILLAIN ENCOUNTERS</span>
+</div>
+<div class="flex flex-col">
+<span class="text-secondary-container font-headline text-4xl font-bold tracking-tighter">142</span>
+<span class="font-label text-on-surface-variant tracking-widest text-[0.7rem]">DISCOVERED UNIVERSES</span>
+</div>
+<div class="flex flex-col">
+<span class="text-white font-headline text-4xl font-bold tracking-tighter">1</span>
+<span class="font-label text-on-surface-variant tracking-widest text-[0.7rem]">COMMON RESPONSIBILITY</span>
+</div>
+<div class="flex flex-col">
+<span class="text-primary font-headline text-4xl font-bold tracking-tighter">04</span>
+<span class="font-label text-on-surface-variant tracking-widest text-[0.7rem]">NEXUS ANOMALIES</span>
+</div>
+</div>
+</section>
+<!-- Dimension Selector (Asymmetric Layout) -->
+<section class="py-24 px-8 md:px-24 bg-surface relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container/5 blur-[120px] rounded-full"></div>
+<div class="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square bg-surface-container-high rounded-sm overflow-hidden border border-white/5 p-4">
+<div class="w-full h-full border border-primary-container/20 p-4 flex items-center justify-center relative">
+<!-- Decorative UI elements -->
+<div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary-container"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary-container"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary-container"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary-container"></div>
+<img alt="Dimension Portal" class="w-full h-full object-cover opacity-80" data-alt="Abstract kaleidoscopic tunnel of light with glowing red and white geometrical shards spinning into a dark center point" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXa7-G8sV1xzhZjonQ8HlV31GylVGAbD0Z6Jg_VOG3jFYmDGX7F1f23S_-vl9-N2nZAIcE2BVDSq7SLf21SGy0n8XMDWhn_Ahc7U3XNTcEQ6J9U57I3jGRdtV1Cfgypyn75DhyU6DMTajQ3FnfMMeH9W0Ntpi1XMtLI96y_rOIUv5uQtyGPkgkadn8J_GsbWApLW_FvHUU7Q-HLaePSiRuIcxBBpornwkPrP_JLf6EQw8pQUDJSi7yFhaOb8IuJdctPR0Jlwmg5Wg"/>
+</div>
+</div>
+<!-- Overlap element -->
+<div class="absolute -bottom-8 -right-8 glass-card border border-white/10 p-6 hidden md:block max-w-[200px]">
+<p class="text-[0.65rem] font-label uppercase leading-relaxed text-secondary">Warning: Dimensional drift detected in Sector 7-G</p>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="font-headline text-5xl font-bold tracking-tighter uppercase leading-none">
+                    Navigate <br/> The <span class="text-primary-container">Web of Life</span>
+</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-6 p-4 border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
+<span class="text-on-surface-variant font-label group-hover:text-primary-container">01</span>
+<h4 class="font-headline text-xl uppercase tracking-wider">Earth-616 Baseline</h4>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant group-hover:translate-x-2 transition-transform">east</span>
+</div>
+<div class="flex items-center gap-6 p-4 border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
+<span class="text-on-surface-variant font-label group-hover:text-primary-container">02</span>
+<h4 class="font-headline text-xl uppercase tracking-wider">Ultimate Universe</h4>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant group-hover:translate-x-2 transition-transform">east</span>
+</div>
+<div class="flex items-center gap-6 p-4 border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
+<span class="text-on-surface-variant font-label group-hover:text-primary-container">03</span>
+<h4 class="font-headline text-xl uppercase tracking-wider">Mangaverse Dimension</h4>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant group-hover:translate-x-2 transition-transform">east</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body pt-4">
+                    Use our proprietary Multiverse Engine to simulate travel between identified realities. Note: Dimensional travel carries risks of canon event disruption.
+                </p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-white/5 bg-[#0e0e0f]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 max-w-[1440px] mx-auto">
+<p class="font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#ad8884] opacity-80">
+                © 2024 Kinetic Weaver Multiverse. Earth-616 Protection.
+            </p>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#ad8884] hover:text-[#ffb4ac] transition-colors opacity-80 hover:opacity-100" href="#">Different Spider-Mans</a>
+<a class="font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#00d2fd] hover:text-[#ffb4ac] transition-colors opacity-80 hover:opacity-100" href="#">Different Verse</a>
+<a class="font-['Manrope'] text-[0.75rem] tracking-[0.1em] uppercase text-[#ad8884] hover:text-[#ffb4ac] transition-colors opacity-80 hover:opacity-100" href="#">Privacy Protocol</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#e62429] cursor-pointer hover:scale-110 transition-transform">shield</span>
+<span class="material-symbols-outlined text-[#e62429] cursor-pointer hover:scale-110 transition-transform">network_ping</span>
+</div>
+</div>
+</footer>
+</body></html>
