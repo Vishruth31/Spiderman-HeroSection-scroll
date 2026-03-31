@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🕷️ Spider-Man Tribute Website
 
-## Getting Started
+A cinematic, immersive Spider-Man tribute website built with modern web technologies.  
+This project is designed to feel like an **interactive movie experience**, combining smooth animations, storytelling, and premium UI design.
 
-First, run the development server:
+---
 
-```bash
+## 🌐 Live Demo
+
+👉 **View Live Website:**  
+https://spidermantribute.netlify.app/
+
+---
+
+## 🎬 About The Project
+
+This is a **fan-made tribute website** inspired by Spider-Man, created to showcase:
+
+- Cinematic storytelling through UI/UX  
+- Smooth scroll-based and interactive animations  
+- Emotional narrative design  
+- Modern frontend development using Next.js  
+
+The goal was to create a **Marvel-style experience on the web**, where users don’t just scroll — they **feel the story**.
+
+---
+
+## ✨ Features
+
+- 🕷️ Cinematic design with dark theme (#050505)
+- 🎬 Smooth animations using Framer Motion
+- 🖼️ Image-based storytelling sections
+- 💬 Dynamic quotes and hero messaging
+- 📱 Fully responsive (mobile + desktop)
+- ⚡ Optimized performance (60fps animations)
+
+---
+
+## 🧰 Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Rendering:** HTML5 Canvas (for animations)
+- **Deployment:** Netlify
+
+---
+
+## 📁 Project Structure
+
+src/
+│
+├── app/
+│   ├── page.tsx
+│   └── globals.css
+│
+├── components/
+│   ├── SpidermanScroll.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Quotes.tsx
+│   ├── Gallery.tsx
+│   ├── Timeline.tsx
+│   └── FinalSection.tsx
+│
+public/
+├── spiderman/        # animation frames
+├── assets/           # images used in sections
+
+---
+
+## 🚀 Getting Started (Run Locally)
+
+### 1. Clone the repository
+
+git clone https://github.com/Vishruth31/Spiderman-HeroSection-scroll.git
+
+---
+
+### 2. Navigate to the project
+
+cd Spiderman
+
+---
+
+### 3. Install dependencies
+
+npm install
+
+---
+
+### 4. Run the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5. Open in browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🖼️ Assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Animation frames are stored in:
+  /public/spiderman/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Images used in sections:
+  /public/assets/
 
-## Deploy on Vercel
+You can replace these with your own images to customize the experience.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Design Goals
+
+- Minimal UI, maximum impact  
+- Cinematic storytelling  
+- Smooth and immersive animations  
+- Emotional connection with the user  
+
+---
+
+## ⚠️ Disclaimer
+
+This is a **fan-made project** created for educational and portfolio purposes.  
+Spider-Man is a character owned by Marvel.
+
+---
+
+## 👨‍💻 Author
+
+Vishruth  
+
+GitHub: https://github.com/Vishruth31
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+- ⭐ Star the repo  
+- 🍴 Fork it  
+- 🚀 Share it  
+
+---
+
+## 🕷️ Final Note
+
+"With great power comes great responsibility."
+
+This project is a tribute to that idea —  
+using code to tell a story.
